@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+    <style>
+        .hover-paragraph {
+            color: black;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="alert('Button clicked!')">Click me</button>
+
+    
+    <p class="hover-paragraph" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Hover over me!</p>
+
+
+    <form onsubmit="validateForm(event)">
+        <input type="text" id="name" placeholder="Name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <img id="mainImage" src="./slack-imgs.jpeg
+        " alt="Main Image" width="300">
+        <div>
+            <img src="./images.png" alt="Thumbnail 1" width="100" onclick="changeImage('thumbnail1.jpg')">
+            <img src="./comic-speech-bubble-with-pop-text_1308-61612.avif" alt="Thumbnail 2" width="100" onclick="changeImage('thumbnail2.jpg')">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Hover me</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <button onclick="incrementCounter()">Click to increment</button>
+    <p id="counter">0</p>
+  
+ 
+    <input type="checkbox" id="enableButton" onchange="toggleButton()">
+    <button id="submitButton" disabled>Submit</button>
+
+
+   
+    <p id="mousePosition">Move your mouse!</p>
+
+ 
+    
+    <input type="text" id="phoneNumber" placeholder="Phone Number" oninput="formatPhoneNumber()">
+    <script src="event.js"></script>
+        
+</body>
+</html>
